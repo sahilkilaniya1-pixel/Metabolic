@@ -1,0 +1,27 @@
+# Advanced Git Commands for Cybersecurity & Disaster Recovery
+
+These commands are extremely useful for cybersecurity tool developers and during emergencies (such as accidental code deletion or credential leaks).
+
+---
+
+## 1. The Time Machine (Lost Code Recovery)
+
+* `git reflog`
+    * **Purpose:** Git's ultimate safety net. Even if you accidentally deleted your code using a destructive command like `git reset --hard`, Git keeps a hidden record of every single action you take. 
+    * **How to Recover:** Run `git reflog` to find the commit hash ID of your deleted work, and then restore it using:
+    ```bash
+    git reset --hard <reflog-hash-id>
+    ```
+
+---
+
+## 2. Purging Secrets & Tokens from History (Data Leak Protection)
+
+* **Scenario:** If you accidentally committed and pushed a sensitive file containing an API Key, Password, or GitHub Personal Access Token, simply deleting the file in a new commit is not enough (it remains in the history).
+* **Solution:** To completely wipe the file from your entire Git commit history across all branches:
+    ```bash
+    git filter-branch --force --index-filter \
+    "git rm --cached --ignore-unmatch <file_with_secret>" \
+    --prune-empty --tag-name-filter cat -- --all
+    ```
+    *(Note: After running this, you will need to force push using `git push origin --force --all` to update GitHub).*
