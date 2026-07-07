@@ -1,0 +1,15 @@
+# Essential Git Commands for Beginners
+
+These commands are used to initialize a project and push your code to GitHub for the first time.
+
+| Command | Description |
+| :--- | :--- |
+| **`git init`** | Initializes a new local Git repository in your current folder. |
+| **`git status`** | Shows the current state of your repository (tracked, untracked, and modified files). |
+| **`git add <file_name>`** | Stages a specific file, preparing it to be committed. |
+| **`git add .`** | Stages all files and changes in the current directory at once. |
+| **`git commit -m "Message"`** | Saves a permanent snapshot (version) of the staged files with a descriptive message. |
+| **`git branch -M main`** | Renames the default branch to `main`. |
+| **`git remote add origin <URL>`** | Links your local repository to a remote repository on GitHub using its URL. |
+| **`git push -u origin main`** | Uploads your local commits to the remote GitHub repository for the first time. |
+| **`git clone <URL>`** | Downloads an existing project or tool from GitHub to your local machine. |
