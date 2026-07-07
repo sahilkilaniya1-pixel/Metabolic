@@ -14,7 +14,7 @@ To clone and run this tool locally on your Kali Linux system:
 
 ```bash
 # Clone the repository
-git clone [https://github.com/YOUR_USERNAME/Metabolic.git](https://github.com/YOUR_USERNAME/Metabolic.git)
+git clone [https://github.com/YOUR_USERNAME/Metabolic.git](https://github.com/sahilkilaniya1-pixel/Metabolic.git)
 
 # Navigate into the project directory
 cd Metabolic
