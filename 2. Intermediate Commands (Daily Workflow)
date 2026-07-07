@@ -1,0 +1,28 @@
+# Git Commands for Daily Workflow
+
+These commands are used when you make daily changes to your code, fix bugs, or want to view older versions of your project.
+
+## 1. Code Tracking and Verification
+
+| Command | Description |
+| :--- | :--- |
+| **`git diff`** | Shows line-by-line changes made to files that are not yet staged. |
+| **`git log`** | Displays the complete commit history of the repository. |
+| **`git log --oneline`** | Shows the commit history in a condensed, clean, one-line format. |
+
+## 2. Branching (Testing new features without affecting the main code)
+
+| Command | Description |
+| :--- | :--- |
+| **`git branch`** | Lists all the branches in your current repository. |
+| **`git checkout -b <branch_name>`** | Creates a new branch and immediately switches to it. |
+| **`git checkout <branch_name>`** | Switches from your current branch to another existing branch. |
+| **`git merge <branch_name>`** | Merges the code of the specified branch into your current active branch (e.g., `main`). |
+| **`git branch -d <branch_name>`** | Deletes a local branch after its work has been completed and merged. |
+
+## 3. Syncing with Remote Repository (GitHub)
+
+| Command | Description |
+| :--- | :--- |
+| **`git fetch`** | Downloads information about new changes from GitHub without modifying or overwriting your local code. |
+| **`git pull`** | Downloads the latest code from GitHub and immediately merges (updates) it into your local code. |
