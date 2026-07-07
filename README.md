@@ -1,6 +1,3 @@
-# Metabolic
-A powerful, lightweight Kali Linux automation and optimization tool designed to streamline penetration testing workflows, manage system resource efficiency, and accelerate post-exploitation tasks.
-
 # 🧬 Metabolic
 
 **Metabolic** is an advanced command-line utility and framework built for **Kali Linux**. It acts as the "metabolism" for your security system—optimizing performance, automating tedious tasks, and keeping your penetration testing workflows fast and efficient.
