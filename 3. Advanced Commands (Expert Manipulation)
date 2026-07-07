@@ -1,0 +1,38 @@
+# Advanced Git Commands Guide
+
+These commands are essential when working on large projects, fixing mistakes, or rewriting commit history.
+
+---
+
+## 1. Undoing Mistakes & Code Rollbacks (Undo & Reset)
+
+*   `git checkout -- <file_name>`
+    *   **Purpose:** Discards local changes in a specific file and restores it to the state of the last commit. Use this if you messed up a file and want a fresh start.
+*   `git reset HEAD <file_name>`
+    *   **Purpose:** Unstages a file. If you accidentally ran `git add` on a file, this removes it from the staging area while keeping your changes intact.
+*   `git reset --soft HEAD~1`
+    *   **Purpose:** Deletes the last commit but keeps all your modified code safe and staged, allowing you to make fixes and commit again.
+*   `git reset --hard HEAD~1`
+    *   **Purpose:** **[⚠️ Handle with care]** Deletes the last commit and completely wipes out all code changes made in that commit. There is no going back!
+
+---
+
+## 2. Managing Incomplete Work (Stashing)
+
+*   `git stash`
+    *   **Purpose:** Temporarily saves (shelves) your current incomplete or uncommitted changes, leaving your working directory completely clean.
+*   `git stash list`
+    *   **Purpose:** Displays a list of all your stashed (hidden) changes.
+*   `git stash pop`
+    *   **Purpose:** Restores the most recently stashed changes back into your working directory so you can pick up exactly where you left off.
+
+---
+
+## 3. Rewriting & Cleaning History (History & Clean-up)
+
+*   `git commit --amend -m "New Message"`
+    *   **Purpose:** Modifies the last commit. Use it to change the previous commit message or to add forgotten files to the last commit.
+*   `git rebase -i HEAD~n` *(Interactive Rebase)*
+    *   **Purpose:** Allows you to modify the last `n` commits. You can merge multiple commits together (Squash), delete commits, or rename them to keep your GitHub commit history clean and structured.
+*   `git cherry-pick <commit-hash>`
+    *   **Purpose:** Applies a single specific commit from another branch into your current branch without merging the entire branch (perfect for quick bug fixes).
